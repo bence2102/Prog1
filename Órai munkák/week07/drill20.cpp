@@ -45,12 +45,12 @@ int main(){
 		std::cout << "std array: ";
 		print(ai);
 
-		std::vector<int> vi;
+		std::vector<int> vi(size);
 		std::copy(arr, arr + size, vi.begin());
 		std::cout << "std vector: ";
 		print(vi);
 
-		std::list<int> li;
+		std::list<int> li(size);
 		std::copy(arr, arr + size, li.begin());
 		std::cout << "std list: ";
 		print(li);
@@ -85,7 +85,14 @@ int main(){
 		}else{
 			std::cout << "Not found" << std::endl;
 		}
-		
+
+		std::list<int>::iterator lit;
+		lit = std::find(li2.begin(),li2.end(), 27);
+		if (lit != li2.end()){
+			std::cout << "Found at: " << std::distance(li2.begin(), lit) << std::endl;
+		}else{
+			std::cout << "Not found" << std::endl;
+		}
 }
 
 	catch (std::exception& e) {
@@ -96,3 +103,4 @@ int main(){
 		return 2;
 }
 }
+
