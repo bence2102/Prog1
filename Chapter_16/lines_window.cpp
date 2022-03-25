@@ -8,9 +8,9 @@ next_x{Point{x_max()-310,0}, 50, 20, "next x:"},
 next_y{Point{x_max()-210,0}, 50, 20, "next y:"},
 xy_out{Point{100,0},100, 20, "current (x,y):"},
 color_menu{Point{x_max()-70,30},70,20,Menu::vertical,"color"},
+lstyle_menu{Point{x_max()-70,30},70,20,Menu::vertical,"lstyle"},
 menu_button{Point{x_max()-80,30}, 80, 20, "color menu", cb_menu},
-menu2_button{Point{x_max()-80,50}, 80, 20, "lstyle menu", cb_menu2},
-lstyle_menu{Point{x_max()-70,30},70,20,Menu::vertical,"lstyle"} 
+menu2_button{Point{x_max()-80,50}, 80, 20, "lstyle menu", cb_menu2}
 {
 attach(next_button);
 attach(quit_button);
@@ -18,19 +18,19 @@ attach(next_x);
 attach(next_y);
 attach(xy_out);
 xy_out.put("no point");
-attach(color_menu);
-color_menu.hide();
 attach(lines);
 attach(menu_button);
 attach(menu2_button);
-attach(lstyle_menu);
-lstyle_menu.hide();
 color_menu.attach(new Button{Point{0,0},0,0,"red",cb_red});
 color_menu.attach(new Button{Point{0,0},0,0,"blue",cb_blue});
 color_menu.attach(new Button{Point{0,0},0,0,"black",cb_black});
+attach(color_menu);
+color_menu.hide();
 lstyle_menu.attach(new Button{Point{0,0},0,0,"solid",cb_solid});
 lstyle_menu.attach(new Button{Point{0,0},0,0,"dash",cb_dash});
 lstyle_menu.attach(new Button{Point{0,0},0,0,"dot",cb_dot});
+attach(lstyle_menu);
+lstyle_menu.hide();
 
 }
 void Lines_window::cb_next(Address, Address pw) { reference_to<Lines_window>(pw).next(); };
