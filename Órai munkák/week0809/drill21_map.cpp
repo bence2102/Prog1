@@ -22,7 +22,7 @@ void read_map(std::map<std::string, int>& m){
 	while(m.size()<10){
 		std::cin >> s >> i;
 		m[s] = i;
-		m.insert(std::make_pair(s,i));
+		m.insert(std::make_pair(s, i));
 	}
 }
 int main()
