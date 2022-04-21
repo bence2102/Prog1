@@ -10,7 +10,7 @@
 
 template<typename K, typename V>
 void print(const std::map<K,V>& m){
-	//for each ciklussal lehet végigmenni rajta, auto milyen típus -> védés
+	//for each ciklussal lehet végigmenni rajta
 	for(auto& i : m){ //for std::pair(k,v) is lehetne
 		std::cout << i.first << '\t' << i.second << std::endl;
 	}
