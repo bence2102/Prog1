@@ -1,0 +1,10 @@
+table 1 12.4
+pen 8 38.3
+plate 9 92.98
+phone 4 3.4
+paper 5 3.6
+chair 7 98.32
+camera 11 7.5
+glass 71 8.6
+lamp 99 1.28
+water 69 69.69
