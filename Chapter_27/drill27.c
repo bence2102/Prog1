@@ -1,6 +1,6 @@
 #include <stdio.h> //printf benne van
 
-void my_print(const char* p,  int x){
+void my_print(const char* p, const int x){
 	printf("p is \"%s\" and x is %d\n", p, x); // %d vagy %i - int
 }
 int main(){
