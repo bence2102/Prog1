@@ -53,7 +53,7 @@ template<typename T>
 std::istream& operator >>(istream& is, vector<T>& v){
 	char ch = 0;
 	is >> ch;
-	if(ch /= '{'){
+	if(ch != '{'){
 		is.unget();
 		return is;
 	}
